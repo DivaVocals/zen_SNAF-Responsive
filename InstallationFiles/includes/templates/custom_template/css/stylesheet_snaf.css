@@ -1,0 +1,87 @@
+/*
+SNAF   niccol
+*/
+.listingRow {display:table-row;}
+
+/*SNAF Product Listing (Column & Row Layouts)*/
+#style_changer input {background : transparent;}
+h3.itemTitle {font-weight: bold;}
+.listingDescription {
+	text-align : left;
+	font-size : 1.4rem;
+	margin-bottom: 10px;
+}
+label.listingLabel {font-size: 105%;}
+
+/*SNAF Product Listing (Column Layout)*/
+.innerColumn {
+	background : none 0% 0% repeat scroll #F4F4F4;
+	border : #DBDBCE solid 1px;
+	padding : 20px 10px;
+	transition : border 2s 0s ease;
+	text-align : center;
+	margin-left : 15px;
+	margin-bottom : 20px;
+	border-radius : 3px;
+	font-size: 85%;
+	min-height : 496px;
+}
+.innerColumn:hover {
+	border : #231f20 solid 1px;
+}
+.listingRow #listCell0.centerBoxContentsProducts,
+.listingRow #listCell1.centerBoxContentsProducts,
+.listingRow #listCell2.centerBoxContentsProducts {
+	width: 33.1%;
+}
+
+/*SNAF Product Listing (Row Layout)*/
+.listingRow #listCell0.productListing-heading,
+.listingRow #listCell1.productListing-heading,
+.listingRow #listCell2.productListing-heading, 
+.listingRow #listCell0.productListing-data,
+.listingRow #listCell1.productListing-data,
+.listingRow #listCell2.productListing-data {
+	float: left;
+}
+.listingRow #listCell0.productListing-heading,
+.listingRow #listCell0.productListing-data {
+	text-align: center;
+	width: 19%;
+}
+.listingRow #listCell1.productListing-heading,
+.listingRow #listCell1.productListing-data {
+	width: 59%;
+	padding-left: .5em;
+}
+.listingRow #listCell2.productListing-heading,
+.listingRow #listCell2.productListing-data {
+	width: 21.5%;
+}
+/*.listingRow #listCell0.productListing-heading,
+.listingRow #listCell1.productListing-heading,
+.listingRow #listCell2.productListing-heading */
+.listingRow .productListing-heading {
+	font-weight:bold;
+	background: none repeat scroll 0% 0% #F0F0F0;
+	border-width: 0px 0px 2px;
+	border-style: solid;
+	border-color: #C7C7C7;
+}
+.listingRow #listCell0.productListing-data,
+.listingRow #listCell1.productListing-data,
+.listingRow #listCell2.productListing-data {
+	font-size: 85%;
+	border-bottom: #DBDBCE solid 1px;
+	min-height: 175px;
+}
+.listingRow #listCell2.productListing-heading,
+.listingRow #listCell2.productListing-data {
+	text-align: right;
+	padding-right: 9px;
+}
+
+@media (max-width:767px){
+	.listingRow {display:block;}
+	div.centerBoxContentsProducts.centeredContent, div.centerBoxContentsNew.centeredContent, div.categoryListBoxContents.centeredContent, div.centerBoxContentsAlsoPurch.centeredContent, div.centerBoxContentsFeatured.centeredContent, div.centerBoxContentsSpecials.centeredContent, div.specialsListBoxContents, div.categoryListBoxContents {clear:both;width:94%!important;height:auto;}
+}

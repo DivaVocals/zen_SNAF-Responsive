@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Readme for SNAF module</title>
+<style type="text/css">
+<!--
+body {font:100% Verdana, Arial, Helvetica, sans-serif; text-align:center; color:#333; margin:0; padding:0}
+#header {font:300% Georgia, "Times New Roman", Times, serif; background-color:#000; border-bottom: 5px solid #85c285}
+#header a {color: #fff; text-decoration:none}
+#header a:hover {color: #85c285}
+#wrapper {width: 780px; margin: 0 auto; text-align: left}
+h1 {font:200% Georgia, "Times New Roman", Times, serif; color:#000}
+h2 {font:italic 140% Georgia, "Times New Roman", Times, serif; color:#000}
+.filename {font:90% "Courier New", Courier, monospace; color:#660000}
+code {background:#eee; margin:.5em 2em; padding: .5em; font-family:"Courier New", Courier, monospace; display:block}
+-->
+</style>
+</head>
+<body>
+<div id="wrapper">
+  <h1 align="center">SNAF Module v1.2</h1>
+  <h1 align="center">Product Listing for Specials, New, All and Featured Products</h1>
+  <p>This add-on is a re-working of the Single Listing Template  is targeted at Zen 1.5.0.  It will not work with previous versions of Zen without modification to the sql statements.</p>
+  <h2>What This Module Does</h2>
+	<hr />
+	<p>It adds 'column grid' functionality that allows products to be displayed in columns rather than rows in the product_listing display.  It adds the following configuration options to <em>configuration>>Product Listing</em></p>
+	<ul>
+	<li>Product Listing - Columns Per Row</li>
+	<li>Product Listing - Layout Style</li>
+	<li>Use Product Listing Filter for Column Display</li>
+	<li>Use Style Changer for Product Listing</li>
+
+	</ul>
+	<p>The Product Listing Filter is a dropdown menu that allows the user to sort the listing on certain criteria.  It is similar to the dropdowns used in the default all products listing.</p>
+	<p>The Style Changer is a button on the Product Listing page that allows the user to change styles.</p>
+	<hr />
+	<p>It adds the following configuration options to <em>configuration>>All Listing</em></p>
+	<ul>
+	<li>Use Product Listing Format for All Products</li>
+	<li>Use Product Listing Filter for All Products in SNAF</li>
+	</ul>
+	<p>These allow the store owner to choose to use the product_listing display format or the default display format and to choose whether to display the dropdown listing filter.</p>
+	<hr/>
+	<p>It adds the following configuration options to <em>configuration>>New Listing</em></p>
+	<ul>
+	<li>Use Product Listing Format for New Products</li>
+	<li>Use Product Listing Filter for New Products in SNAF</li>
+	</ul>
+	<p>These allow the store owner to choose to use the product_listing display format or the default display format and to choose whether to display the dropdown listing filter.</p>
+	<hr/>
+	<p>It adds the following configuration options to <em>configuration>>Featured Listing</em></p>
+	<ul>
+	<li>Use Product Listing Format for New Products</li>
+	<li>Use Product Listing Filter for New Products in SNAF</li>
+	</ul>
+	<p>These allow the store owner to choose to use the product_listing display format or the default display format and to choose whether to display the dropdown listing filter.</p>
+	<hr/>
+	<p>It creates a new menu item as <em>configuration>>Specials Listing</em> It adds the following configuration options to configuration>>Specials Listing</p>
+	<ul>
+	<li>Include Salemaker Items in Specials Listing</li>
+	<li>Use Product Listing Format for Specials Listing</li>
+	<li>Use Product Listing Filter for Specials in SNAF</li>
+	</ul>
+	<p>These allow the store owner to choose to use the product_listing display format or the default display format and to choose whether to display the dropdown listing filter.</p>
+	<p>The store owner can also choose to include salemaker items in the 'specials' categorisation.</p>
+	<p>It may be noted that there is also a category sort facility built into the code that allows the specials to be filtered on the basis of categories using the get parameter sale_category ( a url might look like this index.php?main_page=specials&amp;sale_category=1).  Which can be useful at times.</p>
+	<hr/>
+
+  <h2>Installation</h2>
+
+	<p>This module will only work with zen Cart 1.5.0 at the time of writing.  (Jan 2012) </p>
+	
+	<p>For previous versions you would need to adapt the sql statements that are run on installation.</p>
+	
+	<ul>
+	<li><strong>BACKUP YOUR SITE AND DATABASE AND PUT THE BACKUP SOMEWHERE SAFE</strong></li> 
+	<li>If you have decided to skip the step above, please change your mind</li>
+	<li>Download the package and un-zip it to your computer.</li>
+	<li>In the 'Installation Files' folder make the following changes<br/>
+	-- rename the YOUR_ADMIN folder to match your installation<br/>
+	-- rename the includes/templates/YOUR_TEMPLATE folder to match your active template<br/>
+	-- rename the includes/modules/YOUR_TEMPLATE folder to match your active template</li>
+	<li>If you are using a language other than English you may want to create a version of the file YOUR_ADMIN/includes/languages/english/extra_definitions/snaf.php for your own language.</li>
+	<li>Upload the files in the Installation Files folder to your server.  They are structured so that the upload should be simple.</li>
+	<li>The first time that you access an admin page the installation of the database changes will be actioned. You will receive a message at the top of the page saying that it has happened correctly.</li>
+	</ul>
+
+  <h2>Files</h2>
+
+	<p>Files included in this module are:</p>
+	
+	<p>
+	YOUR_ADMIN/includes/auto_loaders/config.snaf.php<br/>
+	YOUR_ADMIN/includes/init_includes/init_snaf.php<br/>
+	YOUR_ADMIN/includes/languages/english/extra_definitions/snaf.php<br/>
+	<br/>
+	includes/index_filters/default_filter.php<br/>
+	includes/modules/YOUR_TEMPLATE/product_listing.php<br/>
+	includes/modules/pages/featured_products/header_php.php<br/>
+	includes/modules/pages/products_all/header_php.php<br/>
+	includes/modules/pages/products_new/header_php.php<br/>
+	includes/modules/pages/specials/main_template_vars.php<br/>
+	includes/templates/YOUR_TEMPLATE/templates/tpl_featured_products_default.php<br/>
+	includes/templates/YOUR_TEMPLATE/templates/tpl_products_all.php<br/>
+	includes/templates/YOUR_TEMPLATE/templates/tpl_products_new_default.php<br/>
+	includes/templates/YOUR_TEMPLATE/templates/tpl_specials_default.php<br/>
+	includes/templates/YOUR_TEMPLATE/templates/tpl_snaf_display_order.php<br/>
+	includes/templates/YOUR_TEMPLATE/templates/tpl_snaf_style_changer.php<br/>
+	includes/auto_loaders/config.snaf_style_changer.php<br/>
+	includes/init_includes/init_snaf_style_changer.php<br/>
+	includes/templates/YOUR_TEMPLATE/common/tpl_tabular_display.php
+	includes/languages/english/extra_definitions/snaf.php
+	includes/templates/YOUR_TEMPLATE/buttons/english/rows.jpg
+	includes/templates/YOUR_TEMPLATE/buttons/english/columns.jpg
+	</p>
+
+	<p>YOUR_ADMIN/includes/auto_loaders/config.snaf.php will be deleted from the server the first time an admin page is accessed after install.</p>
+	
+	<p>It can be noted that all the 'YOUR_TEMPLATE' and 'YOUR_ADMIN' need to be changed prior to upload.</p>
+
+  <h2>Version Notes</h2>
+
+	<p>A style changer feature has been introduced.  You have the choice of using this on the product listing pages or not.  If you use it an icon will appear on those pages that allows the user to change between row style and column style.  Yes, I am not a graphic designer. So, the icon is not beautiful but you will probably wish to change it yourself to match your own template.  To do so just replace the two image files that are in the buttons directory.  If you wish to change from a jpg then you will need to edit the language file additionally.</p>
+
+	<p>An inner container has been placed in the column view 'boxes'.  This is primarily to allow easier styling to achieve certain effects. For instance, a gutter or spacing between the 'boxes' and a border around the 'boxes' on the product listing can be achieved with the stylesheet rule:</p>
+
+	<p>.centerBoxContentsProducts .innerColumn{<br/>  margin:5px;<br/>  border:1px solid #aaa;<br/>}</p>
+
+  <h2>Uninstall</h2>
+
+	<p>There are two steps to uninstalling this module.</p>
+	
+	<ol>
+	<li>First unistall the database changes.  This can be done manually, or by re-uploading an altered version of the file YOUR_ADMIN/includes/auto_loaders/config.snaf.php.  Simply open the file in your text editor and uncomment the line that is clearly shown.  Then upload this file back to your server in the autoloaders directory.  Access a admin page and the database changes will be uninstalled.</li>
+	<li>Remove all the files from the installation replacing them, where appropriate, with the corresponding files from your backup.</li>
+	
+	</ol>
+
+  <h2>Change Log v1.2</h2>
+	<ol>
+	<li>Edits to includes/modules/YOUR_TEMPLATE/product_listing.php<br/>To create "inner box" elements for styling.  To add the style changer feature. To load the index language files if required</li>
+	<li>includes/templates/YOUR_TEMPLATE/common/tpl_tabular_display.php<br/>New override file.  To prevent creation of 'th' tags on column listing.</li>
+	<li>includes/auto_loaders/config.snaf_style_changer.php<br/>
+	includes/init_includes/init_snaf_style_changer.php<br/> New  files.  Used to set session variable used in the style changer feature.</li>
+	<li>includes/languages/english/extra_definitions/snaf.php<br/>
+	includes/templates/YOUR_TEMPLATE/buttons/english/rows.jpg<br/>
+	includes/templates/YOUR_TEMPLATE/buttons/english/columns.jpg<br/> New  files.  All to do with the style changer button</li>
+	<li>YOUR_ADMIN/includes/init_includes/init_snaf.php<br/> Edits to existing file to add sql for admin setting of the Style Changer feature.</li>
+	<li>includes/modules/pages/specials/main_template_vars.php<br/> Edits to existing file to alter sql to add full variable list.</li>
+		
+	</ol>
+	
+
+
+
+  <h2>License &amp; Copyright</h2>
+  <p>Zen Cart Open Source E-commerce - SNAF Module</p>
+  <p>Copyright (c) 2012 Nick Collie (<a href="http://clearright.co.uk" title="ClearRight">www.clearright.co.uk</a>)<br />
+    
+  Portions Copyright (c) 2003 osCommerce, 2003-2007 Zen Cart</p>
+  <p>This contribution is subject to version 2.0 of the GPL license</p>
+</div>
+</body>
+</html>
