@@ -24,7 +24,7 @@
                                     p.products_tax_class_id, p.products_date_added, m.manufacturers_name, p.products_model,
                                     p.products_quantity, p.products_weight, p.product_is_call,
                                     p.product_is_always_free_shipping, p.products_qty_box_status,
-                                    p.master_categories_id
+                                    p.master_categories_id, m.manufacturers_id 
                              FROM " . TABLE_PRODUCTS . " p
                              LEFT JOIN " . TABLE_MANUFACTURERS . " m
                              ON (p.manufacturers_id = m.manufacturers_id), " . TABLE_PRODUCTS_DESCRIPTION . " pd
