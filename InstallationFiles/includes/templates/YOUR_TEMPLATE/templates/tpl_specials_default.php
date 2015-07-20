@@ -1,6 +1,6 @@
 <?php
 /**
- * SNAF version 1.2
+ * SNAF version 1.4
  * Page Template
  *
  * @package templateSystem

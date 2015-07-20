@@ -1,9 +1,8 @@
 <?php
 /*
- * SNAF version 1.2
+ * SNAF version 1.4
  * product listing version
 */
-
 /**
  * product_listing module
  *
@@ -22,7 +21,7 @@ if (!defined('IS_ADMIN_FLAG')) {
 // include language file if required
 if (!defined('TEXT_NO_PRODUCTS')) {
 $category_depth = 'products';
-include_once('includes/languages/'.$_SESSION['language'].'/index.php');
+include_once(DIR_WS_LANGUAGES . $_SESSION['language'] . '/' . 'index.php'); 
 }
 
 // Column Layout Support originally added for Zen Cart v 1.1.4 by Eric Stamper - 02/14/2004
@@ -320,4 +319,3 @@ require($template->get_template_dir('/tpl_snaf_display_order.php',DIR_WS_TEMPLAT
     echo zen_draw_form('multiple_products_cart_quantity', zen_href_link(FILENAME_DEFAULT, zen_get_all_get_params(array('action')) . 'action=multiple_products_add_product', $request_type), 'post', 'enctype="multipart/form-data"');
   }
 
-?>

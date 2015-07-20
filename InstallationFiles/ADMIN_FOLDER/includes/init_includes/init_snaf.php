@@ -41,9 +41,6 @@ zen_register_admin_page('configSpecialsListing',
 	'gID=' . $specials_configuration_id, 'configuration', 'Y',
 	$specials_sort_order);
 
-
-
-
 // create Specials Page Entry while keeping previous values
 	$c_key = 'INCLUDE_SALEMAKER_IN_SPECIALS';
 	
@@ -74,7 +71,6 @@ zen_register_admin_page('configSpecialsListing',
 	$db->Execute($sql);
 // eof page entry
 
-
 // create Specials Page Entry while keeping previous values
 	$c_key = 'USE_PRODUCT_LISTING_FILTER_FOR_SPECIALS';
 	
@@ -89,7 +85,6 @@ zen_register_admin_page('configSpecialsListing',
 	(NULL, 'Use Product Listing Filter for Specials in SNAF', '".$c_key."', '".$config_value."', 'Show the Product Listing Filter when using the Product Listing Format for Specials (SNAF) when the column display is used', ".$specials_configuration_id.", 920, now(), now(), NULL, 'zen_cfg_select_option(array(''True'',''False''),')";
 	$db->Execute($sql);
 // eof page entry
-
 
 /* Find Config ID of All Products */
 $sql = "SELECT configuration_group_id FROM ".TABLE_CONFIGURATION_GROUP." WHERE configuration_group_title='All listing' LIMIT 1";
@@ -323,12 +318,8 @@ $messageStack->add('SNAF database changes have been installed', 'success');
 	$sql ="DELETE FROM ".TABLE_CONFIGURATION." WHERE configuration_key = '".$c_key."'";
 	$db->Execute($sql);
 
-
-
 $messageStack->add('SNAF database changes have been uninstalled', 'success');
 
 }
-
-
 
 @unlink(DIR_FS_ADMIN . DIR_WS_INCLUDES . 'auto_loaders/config.snaf.php');

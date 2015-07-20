@@ -1,6 +1,6 @@
 <?php
 /**
- * SNAF version 1.2
+ * SNAF version 1.4
  * products_all  header_php.php
  *
  * @package page
@@ -124,4 +124,4 @@ if (PRODUCT_LISTING_LAYOUT_STYLE == 'rows'){
 
 }
 //===========  eof SNAF (set up for product listing)
-?>
+

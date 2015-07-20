@@ -1,6 +1,6 @@
 <?php
 /**
- * SNAF version 1.2
+ * SNAF version 1.4
  * Common Template - tpl_tabular_display.php
  *
  * This file is used for generating tabular output where needed, based on the supplied array of table-cell contents.
